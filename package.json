@@ -1,0 +1,13 @@
+{
+  "name": "broproxy",
+  "author": "Federico Rampazzo <frampone@gmail.com>",
+  "repository": "https://github.com/framp/broproxy",
+  "version": "0.0.1",
+  "keywords": [
+    "proxy",
+    "simple",
+    "http", 
+    "https", 
+    "tunnel"
+  ]
+} 
