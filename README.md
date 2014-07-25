@@ -1,6 +1,9 @@
 broproxy
 =========
 
+WARNING: this thing is kind of broken for certain use cases but works fine for others.
+DO NOT USE IT unless you know what you're doing.
+
 A small and simple node.js library to proxy a request to another URL.
 
 It's not a full-featured http proxy like [node-http-proxy](https://github.com/nodejitsu/node-http-proxy).

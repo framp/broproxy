@@ -16,18 +16,19 @@ module.exports = function(link, req, res){
   target.method = req.method;
   
   var proxyReq = http.request(target, function (proxyRes) {
-    proxyRes.addListener('data', function(chunk) {
+    proxyRes.on('data', function(chunk) {
       res.write(chunk, 'binary');
     });
-    proxyRes.addListener('end', function() {
+    proxyRes.on('end', function() {
       res.end();
     });
     res.writeHead(proxyRes.statusCode, proxyRes.headers);
   });
-  req.addListener('data', function(chunk) {
+  req.on('data', function(chunk) {
     proxyReq.write(chunk, 'binary');
+    console.log(chunk);
   });
-  req.addListener('end', function() {
+  req.on('end', function() {
     proxyReq.end();
   });
 }
